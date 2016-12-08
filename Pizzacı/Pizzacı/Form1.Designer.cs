@@ -1,4 +1,4 @@
-﻿namespace Pizzacı
+﻿namespace Pizzaci
 {
     partial class Form1
     {
