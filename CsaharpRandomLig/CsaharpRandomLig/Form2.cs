@@ -115,7 +115,7 @@ namespace CsaharpRandomLig
             }
             else if (Convert.ToInt32(label6.Text) == Convert.ToInt32(label7.Text))
             {
-                fbpuan = fbpuan + 3;
+                fbpuan = fbpuan + 1;
                 labelfbpuan.Text = fbpuan.ToString();
                 adspuan = adspuan + 1;
                 labeladspuan.Text = adspuan.ToString();
