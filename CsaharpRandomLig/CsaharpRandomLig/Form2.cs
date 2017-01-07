@@ -182,6 +182,7 @@ namespace CsaharpRandomLig
         private void button4_Click(object sender, EventArgs e)
         {
            //Skor eşit oldugunda oyun tekrar başlatılamadı
+           //Skorlar eşit ise avaraj hesabı yaptır
             if (Convert.ToInt32(labelgspuan.Text) > Convert.ToInt32(labelfbpuan.Text) && Convert.ToInt32(labelgspuan.Text) > Convert.ToInt32(labeladspuan.Text) && Convert.ToInt32(labelgspuan.Text) > Convert.ToInt32(labelbjkpuan.Text))
             {
                 axWindowsMediaPlayer1.URL = "C:\\Users\\Kaan\\Desktop\\Yeni klasör\\GS.mp3";

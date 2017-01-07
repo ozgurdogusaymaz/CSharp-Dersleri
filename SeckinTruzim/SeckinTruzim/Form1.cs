@@ -104,6 +104,7 @@ namespace SeckinTruzim
 
             GBoxMusteriBilgileri.Enabled = true;
 
+            #region Kullanıcı Bilgilerini Getir
             if (CBoxOtobusTuru.SelectedItem.ToString() == "Travego")
             {
                 string yolcu = travegoYolcularIsim[int.Parse(secilenKoltuk.Text) - 1];
@@ -151,6 +152,7 @@ namespace SeckinTruzim
                 }
             }
         }
+        #endregion
         string[] travegoYolcularIsim = new string[47];
         string[] travegoYolcularCinsiyet = new string[47];
         string[] neoplanYolcularIsim = new string[55];
