@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioBtnTam = new System.Windows.Forms.RadioButton();
-            this.radioBtnOgrenci = new System.Windows.Forms.RadioButton();
-            this.radioBtnOgretmen = new System.Windows.Forms.RadioButton();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.labelBakiye = new System.Windows.Forms.Label();
-            this.TxtBakiye = new System.Windows.Forms.TextBox();
+            this.lstBoxYolcular = new System.Windows.Forms.ListBox();
             this.GBoxOkuladi = new System.Windows.Forms.GroupBox();
             this.TxtOkulAdi = new System.Windows.Forms.TextBox();
-            this.lstBoxYolcular = new System.Windows.Forms.ListBox();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.TxtBakiye = new System.Windows.Forms.TextBox();
+            this.radioBtnOgretmen = new System.Windows.Forms.RadioButton();
+            this.labelBakiye = new System.Windows.Forms.Label();
+            this.radioBtnOgrenci = new System.Windows.Forms.RadioButton();
+            this.radioBtnTam = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.GBoxOkuladi.SuspendLayout();
             this.SuspendLayout();
@@ -60,71 +60,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kart Oluştur";
             // 
-            // radioBtnTam
+            // lstBoxYolcular
             // 
-            this.radioBtnTam.AutoSize = true;
-            this.radioBtnTam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnTam.Location = new System.Drawing.Point(29, 42);
-            this.radioBtnTam.Name = "radioBtnTam";
-            this.radioBtnTam.Size = new System.Drawing.Size(57, 20);
-            this.radioBtnTam.TabIndex = 1;
-            this.radioBtnTam.TabStop = true;
-            this.radioBtnTam.Text = "Tam";
-            this.radioBtnTam.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnOgrenci
-            // 
-            this.radioBtnOgrenci.AutoSize = true;
-            this.radioBtnOgrenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnOgrenci.Location = new System.Drawing.Point(29, 68);
-            this.radioBtnOgrenci.Name = "radioBtnOgrenci";
-            this.radioBtnOgrenci.Size = new System.Drawing.Size(80, 20);
-            this.radioBtnOgrenci.TabIndex = 2;
-            this.radioBtnOgrenci.TabStop = true;
-            this.radioBtnOgrenci.Text = "Ögrenci";
-            this.radioBtnOgrenci.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnOgretmen
-            // 
-            this.radioBtnOgretmen.AutoSize = true;
-            this.radioBtnOgretmen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioBtnOgretmen.Location = new System.Drawing.Point(29, 94);
-            this.radioBtnOgretmen.Name = "radioBtnOgretmen";
-            this.radioBtnOgretmen.Size = new System.Drawing.Size(93, 20);
-            this.radioBtnOgretmen.TabIndex = 3;
-            this.radioBtnOgretmen.TabStop = true;
-            this.radioBtnOgretmen.Text = "Ögretmen";
-            this.radioBtnOgretmen.UseVisualStyleBackColor = true;
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(29, 140);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(75, 23);
-            this.btnEkle.TabIndex = 4;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            // 
-            // labelBakiye
-            // 
-            this.labelBakiye.AutoSize = true;
-            this.labelBakiye.Location = new System.Drawing.Point(199, 18);
-            this.labelBakiye.Name = "labelBakiye";
-            this.labelBakiye.Size = new System.Drawing.Size(56, 16);
-            this.labelBakiye.TabIndex = 0;
-            this.labelBakiye.Text = "Bakiye";
-            // 
-            // TxtBakiye
-            // 
-            this.TxtBakiye.Location = new System.Drawing.Point(190, 37);
-            this.TxtBakiye.Name = "TxtBakiye";
-            this.TxtBakiye.Size = new System.Drawing.Size(113, 22);
-            this.TxtBakiye.TabIndex = 1;
+            this.lstBoxYolcular.FormattingEnabled = true;
+            this.lstBoxYolcular.ItemHeight = 16;
+            this.lstBoxYolcular.Location = new System.Drawing.Point(29, 190);
+            this.lstBoxYolcular.Name = "lstBoxYolcular";
+            this.lstBoxYolcular.Size = new System.Drawing.Size(375, 196);
+            this.lstBoxYolcular.TabIndex = 6;
+            this.lstBoxYolcular.DoubleClick += new System.EventHandler(this.lstBoxYolcular_DoubleClick);
             // 
             // GBoxOkuladi
             // 
             this.GBoxOkuladi.Controls.Add(this.TxtOkulAdi);
+            this.GBoxOkuladi.Enabled = false;
             this.GBoxOkuladi.Location = new System.Drawing.Point(190, 70);
             this.GBoxOkuladi.Name = "GBoxOkuladi";
             this.GBoxOkuladi.Size = new System.Drawing.Size(200, 100);
@@ -139,14 +88,69 @@
             this.TxtOkulAdi.Size = new System.Drawing.Size(170, 22);
             this.TxtOkulAdi.TabIndex = 6;
             // 
-            // lstBoxYolcular
+            // btnEkle
             // 
-            this.lstBoxYolcular.FormattingEnabled = true;
-            this.lstBoxYolcular.ItemHeight = 16;
-            this.lstBoxYolcular.Location = new System.Drawing.Point(29, 190);
-            this.lstBoxYolcular.Name = "lstBoxYolcular";
-            this.lstBoxYolcular.Size = new System.Drawing.Size(375, 196);
-            this.lstBoxYolcular.TabIndex = 6;
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Location = new System.Drawing.Point(29, 140);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.TabIndex = 4;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // TxtBakiye
+            // 
+            this.TxtBakiye.Location = new System.Drawing.Point(190, 37);
+            this.TxtBakiye.Name = "TxtBakiye";
+            this.TxtBakiye.Size = new System.Drawing.Size(113, 22);
+            this.TxtBakiye.TabIndex = 1;
+            // 
+            // radioBtnOgretmen
+            // 
+            this.radioBtnOgretmen.AutoSize = true;
+            this.radioBtnOgretmen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtnOgretmen.Location = new System.Drawing.Point(29, 94);
+            this.radioBtnOgretmen.Name = "radioBtnOgretmen";
+            this.radioBtnOgretmen.Size = new System.Drawing.Size(93, 20);
+            this.radioBtnOgretmen.TabIndex = 3;
+            this.radioBtnOgretmen.TabStop = true;
+            this.radioBtnOgretmen.Text = "Ögretmen";
+            this.radioBtnOgretmen.UseVisualStyleBackColor = true;
+            // 
+            // labelBakiye
+            // 
+            this.labelBakiye.AutoSize = true;
+            this.labelBakiye.Location = new System.Drawing.Point(199, 18);
+            this.labelBakiye.Name = "labelBakiye";
+            this.labelBakiye.Size = new System.Drawing.Size(56, 16);
+            this.labelBakiye.TabIndex = 0;
+            this.labelBakiye.Text = "Bakiye";
+            // 
+            // radioBtnOgrenci
+            // 
+            this.radioBtnOgrenci.AutoSize = true;
+            this.radioBtnOgrenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtnOgrenci.Location = new System.Drawing.Point(29, 68);
+            this.radioBtnOgrenci.Name = "radioBtnOgrenci";
+            this.radioBtnOgrenci.Size = new System.Drawing.Size(80, 20);
+            this.radioBtnOgrenci.TabIndex = 2;
+            this.radioBtnOgrenci.TabStop = true;
+            this.radioBtnOgrenci.Text = "Ögrenci";
+            this.radioBtnOgrenci.UseVisualStyleBackColor = true;
+            this.radioBtnOgrenci.CheckedChanged += new System.EventHandler(this.radioBtnOgrenci_CheckedChanged);
+            // 
+            // radioBtnTam
+            // 
+            this.radioBtnTam.AutoSize = true;
+            this.radioBtnTam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioBtnTam.Location = new System.Drawing.Point(29, 42);
+            this.radioBtnTam.Name = "radioBtnTam";
+            this.radioBtnTam.Size = new System.Drawing.Size(57, 20);
+            this.radioBtnTam.TabIndex = 1;
+            this.radioBtnTam.TabStop = true;
+            this.radioBtnTam.Text = "Tam";
+            this.radioBtnTam.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -156,6 +160,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.GBoxOkuladi.ResumeLayout(false);

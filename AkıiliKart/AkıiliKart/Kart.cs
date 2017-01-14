@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace AkıiliKart
 {
-    enum YolcuTipi
+    public enum YolcuTipi
     {
         Tam,
         Ögrenci,
         Öğretmen
     }
-    class Kart
+    public class Kart
     {
         public int KartID { get; set; }
 
